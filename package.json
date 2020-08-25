@@ -1,0 +1,24 @@
+{
+  "name": "multiplicationflashcards",
+  "version": "1.0.0",
+  "description": "flash cards for multipliationcas sdoflskdl;;;;; or something",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ./src/electron/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeriousGuy888/MultiplicationFlashCards.git"
+  },
+  "author": "SeriousGuy888",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SeriousGuy888/MultiplicationFlashCards/issues"
+  },
+  "homepage": "https://github.com/SeriousGuy888/MultiplicationFlashCards#readme",
+  "private": true,
+  "dependencies": {
+    "electron": "^10.0.0"
+  },
+  "devDependencies": {}
+}
