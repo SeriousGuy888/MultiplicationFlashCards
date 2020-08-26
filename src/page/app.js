@@ -65,7 +65,7 @@ toggleButton.addEventListener("click", () => {
 
   toggleButton.innerHTML = activated ? "Settings" : "Start"
   for(let loopOpt of Object.keys(options)) {
-    options[loopOpt] = document.querySelector(`.${loopOpt}`).value
+    options[loopOpt] = parseInt(document.querySelector(`.${loopOpt}`).value)
   }
 
   clearAnswerField()
