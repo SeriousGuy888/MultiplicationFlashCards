@@ -1,4 +1,6 @@
+const squaresOnlyCheckbox = document.querySelector(".squares-only")
 const toggleButton = document.querySelector(".toggle-activation")
+
 const paramInput = document.querySelector(".get-params")
 const actualApp = document.querySelector(".app")
 
@@ -10,6 +12,7 @@ const correctCounter = document.querySelector(".correct-counter")
 const skipCounter = document.querySelector(".skip-counter")
 const incorrectCounter = document.querySelector(".incorrect-counter")
 
+let squaresOnly = false
 let activated = false
 let options = {
   min1: 1,
@@ -50,7 +53,9 @@ const clearAnswerField = () => {
 const randomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
 
 const getNewQuestion = () => {
-  setQuestion(randomNumber(options.min1, options.max1), randomNumber(options.min2, options.max2))
+  const num1 = randomNumber(options.min1, options.max1)
+  const num2 = squaresOnly ? num1 : randomNumber(options.min2, options.max2)
+  setQuestion(num1, num2)
 }
 
 const updateDisplay = () => {
@@ -59,6 +64,21 @@ const updateDisplay = () => {
 
   displayToQuestionField(question)
 }
+
+squaresOnlyCheckbox.addEventListener("click", () => {
+  const factor1Span = document.querySelector(".factor-1-text")
+  const factor2Para = document.querySelector(".factor-2-input")
+  squaresOnly = squaresOnlyCheckbox.checked
+  
+  if(squaresOnly) {
+    factor2Para.style.display = "none"
+    factor1Span.innerHTML = "Factor"
+  }
+  else {
+    factor2Para.style.display = "block"
+    factor1Span.innerHTML = "First factor"
+  }
+})
 
 toggleButton.addEventListener("click", () => {
   activated = !activated
