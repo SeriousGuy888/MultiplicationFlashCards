@@ -1,12 +1,10 @@
 # Multiplication Flash Cards
 
 Why does this exist?\
-*Because I was bored one afternoon.*
-\
+*Because I was bored one afternoon.*\
 \
 Why is this written so stupidly?\
-*I tried my best D:*
-\
+*I tried my best D:*\
 \
 How do I use it?\
-*Use Electron or you can just open the HTML file at under `src/page/index.html`*
+*It can be found on GitHub Pages right [here](https://seriousguy888.github.io/MultiplicationFlashCards/)*
