@@ -1,0 +1,115 @@
+$inputBoxPadding: 5px;
+
+$unselectedInputColour: #2525b9;
+$selectedInputColour: #15a0c9;
+$buttonTextColour: #eeeeee;
+
+$backgroundColour: #b3b3b3;
+$panelBackgroundColour: #efefef;
+$subpanelBackgroundColour: #cdcdcd;
+
+$flashAnimationLength: 0.33s;
+$flashAnimationType: linear;
+
+
+html {
+  font-family: Roboto, Arial, sans-serif;
+  background-color: $backgroundColour;
+  margin-left: 3vw;
+  margin-top: 3vh;
+
+  .center {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  button {
+    color: $buttonTextColour;
+    font-size: 18px;
+    background-color: $unselectedInputColour;
+
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+
+    transition-duration: 0.4s;
+
+    &:hover {
+      background-color: $selectedInputColour;
+    }
+
+    &.center {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #23ae23;
+  }
+
+
+  .display-panel {
+    background-color: $panelBackgroundColour;
+    width: 75%;
+    height: 20vh;
+    padding: 3%;
+    border-radius: 12px;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
+
+  .counter-panel {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: auto auto auto;
+    .counter-subpanel {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      background-color: $subpanelBackgroundColour;
+      border-radius: 12px;
+
+      .correct-flash {
+        animation: correct-flash $flashAnimationLength $flashAnimationType;
+      }
+      .incorrect-flash {
+        animation: incorrect-flash $flashAnimationLength $flashAnimationType;
+      }
+
+      @keyframes correct-flash {
+        50% {
+          color: #23de23;
+        }
+      }
+      @keyframes incorrect-flash {
+        50% {
+          color: #ff2222;
+        }
+      }
+    }
+  }
+
+  input[type=text], input[type=number] {
+    width: 3vw;
+    text-align: center;
+
+    padding: $inputBoxPadding;
+
+    background-color: inherit;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid $unselectedInputColour;
+    transition-duration: 0.5s;
+
+    &:focus {
+      border-bottom: 2px solid $selectedInputColour;
+    }
+
+    &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+      display: none;
+    }
+  }
+}

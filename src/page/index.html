@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Multiplication Flash Cards</title>
+
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <h1 class="center">Multiplication Flash Cards</h1>
+
+    <div class="get-params display-panel center">
+      <p>
+        First factor can be from
+        <input type="number" class="factor-params min1" value="1">
+        to
+        <input type="number" class="factor-params max1" value="9">
+      </p>
+      <p>
+        Second factor can be from
+        <input type="number" class="factor-params min2" value="1">
+        to
+        <input type="number" class="factor-params max2" value="9">
+      </p>
+    </div>
+
+    <div class="app display-panel center" style="display: none;">
+      <h2 class="question"></h2>
+      <input type="number" class="answer">
+      <br>
+      <a class="skip-button center" href="#">Skip Question</a>
+    </div>
+
+    <button class="toggle-activation center">Start</button>
+
+    <div class="counter-panel display-panel center">
+      <div class="counter-subpanel">
+        <h4>Correct</h4>
+        <h2 class="correct-counter">0</h2>
+      </div>
+      <div class="counter-subpanel">
+        <h4>Skipped</h4>
+        <h2 class="skip-counter">0</h2>
+      </div>
+      <div class="counter-subpanel">
+        <h4>Incorrect</h4>
+        <h2 class="incorrect-counter">0</h2>
+      </div>
+    </div>
+  </body>
+</html>

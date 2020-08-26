@@ -1,0 +1,123 @@
+html {
+  font-family: Roboto, Arial, sans-serif;
+  background-color: #b3b3b3;
+  margin-left: 3vw;
+  margin-top: 3vh;
+}
+
+html .center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+html button {
+  color: #eeeeee;
+  font-size: 18px;
+  background-color: #2525b9;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+html button:hover {
+  background-color: #15a0c9;
+}
+
+html button.center {
+  display: block;
+  margin: 0 auto;
+}
+
+html a {
+  text-decoration: none;
+  color: #23ae23;
+}
+
+html .display-panel {
+  background-color: #efefef;
+  width: 75%;
+  height: 20vh;
+  padding: 3%;
+  border-radius: 12px;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+html .counter-panel {
+  display: -ms-grid;
+  display: grid;
+  gap: 1em;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+}
+
+html .counter-panel .counter-subpanel {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #cdcdcd;
+  border-radius: 12px;
+}
+
+html .counter-panel .counter-subpanel .correct-flash {
+  -webkit-animation: correct-flash 0.33s linear;
+          animation: correct-flash 0.33s linear;
+}
+
+html .counter-panel .counter-subpanel .incorrect-flash {
+  -webkit-animation: incorrect-flash 0.33s linear;
+          animation: incorrect-flash 0.33s linear;
+}
+
+@-webkit-keyframes correct-flash {
+  50% {
+    color: #23de23;
+  }
+}
+
+@keyframes correct-flash {
+  50% {
+    color: #23de23;
+  }
+}
+
+@-webkit-keyframes incorrect-flash {
+  50% {
+    color: #ff2222;
+  }
+}
+
+@keyframes incorrect-flash {
+  50% {
+    color: #ff2222;
+  }
+}
+
+html input[type=text], html input[type=number] {
+  width: 3vw;
+  text-align: center;
+  padding: 5px;
+  background-color: inherit;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #2525b9;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+html input[type=text]:focus, html input[type=number]:focus {
+  border-bottom: 2px solid #15a0c9;
+}
+
+html input[type=text]::-webkit-inner-spin-button, html input[type=text]::-webkit-outer-spin-button, html input[type=number]::-webkit-inner-spin-button, html input[type=number]::-webkit-outer-spin-button {
+  display: none;
+}
+/*# sourceMappingURL=main.css.map */
