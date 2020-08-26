@@ -47,7 +47,7 @@ const clearAnswerField = () => {
   answerField.value = ""
 }
 
-const randomNumber = (min, max) => Math.ceil(Math.random() * (max - min + 1) + min)
+const randomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
 
 const getNewQuestion = () => {
   setQuestion(randomNumber(options.min1, options.max1), randomNumber(options.min2, options.max2))
