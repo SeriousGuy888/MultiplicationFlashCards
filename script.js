@@ -12,6 +12,13 @@ const correctCounter = document.querySelector(".correct-counter")
 const skipCounter = document.querySelector(".skip-counter")
 const incorrectCounter = document.querySelector(".incorrect-counter")
 
+const defaultOptions = {
+  min1: 1,
+  max1: 9,
+  min2: 1,
+  max2: 9
+}
+
 let squaresOnly = false
 let activated = false
 let options = {
@@ -53,6 +60,12 @@ const clearAnswerField = () => {
 const randomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
 
 const getNewQuestion = () => {
+  for(let loopOpt of Object.keys(options)) {
+    if(isNaN(options[loopOpt])) {
+      options[loopOpt] = defaultOptions[loopOpt]
+    }
+  }
+
   const num1 = randomNumber(options.min1, options.max1)
   const num2 = squaresOnly ? num1 : randomNumber(options.min2, options.max2)
   setQuestion(num1, num2)
