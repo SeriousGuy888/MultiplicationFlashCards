@@ -1,7 +1,7 @@
 # Multiplication Flash Cards
 
 Why does this exist?\
-*Because I was bored one afternoon.*\
+*Because I was bored one afternoon. What else was a meant to do anyways? It's currently late August, 2020 as I write this.*\
 \
 Why is this written so stupidly?\
 *I tried my best D:*\
